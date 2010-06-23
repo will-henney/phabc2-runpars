@@ -1,0 +1,39 @@
+! -*- f90 -*-
+! This (Nostar-64-enpc) has all the same pars as Nostar-64-enfix-noct-p but the initial data cubes
+! have been cshifted by half a box along each axis: (1,1,1) -> (33,33,33)
+&SAVED_PARAMETERS         
+solver = 1,
+use_entropy_fix = T,
+use_constrained_transport = F,
+bctype = 6*4,                   ! Periodic boundary conditions
+! Default values for efix parameters are alpha = 0.05, beta = 1.0, delta = 0.03, sharpness = 10.0
+efix%alpha = 0.05, ! for SW1 : Pgas / Ptot
+efix%beta = 1.0, ! for SW2 - not used!
+efix%delta = 0.03, ! for SW3 : -del V / V
+efix%sharpness = 10.0, ! for SW3
+! WJH 11 May 2009
+! based on t50m32-weak-dm0.pars and B30krum-256.pars
+cour = 0.39,
+use_c2ray = T,
+use_pdr_heatcool = T,
+! Star/cluster parameters - no star
+qh0 = 0.0, 
+tstar = 1000.0, 
+fuv_euv_ratio = 62.5,
+xray%Lstar = 0.0,
+xray%Lcluster = 0.0,
+! 
+lapidus_eta = 0.1,        
+ilogging = 2,             
+atomic_data_dir = '../../tables', 
+xmax =  1.2344e19,   
+ymax =  1.2344e19,   
+zmax =  1.2344e19,   
+time_save_interval =  3.15576e11, 
+nsave_total_run = 1000,    
+nxg = 64, nyg = 64, nzg = 64,  
+i0 = 32, j0 = 32, k0 = 32,     
+! min density 1 pcc      
+density_floor = 2.1744e-24,                 
+initial%variant = 'precalc',                
+/                                

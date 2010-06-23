@@ -1,0 +1,17 @@
+&SAVED_PARAMETERS 
+first_order_only = F,
+ilogging = 2,
+atomic_data_dir = '../../../C2Ray/tables',
+xmax =  6.171355164e19, 
+ymax =  6.171355164e19, 
+zmax =  6.171355164e19, 
+time_save_interval =  3.15576e12, 
+nsave_total_run = 20, 
+i0 = 15, j0 = 15, k0 = 15, 
+qh0 = 0.0, 
+tstar = 1000.0, 
+initial%n = 100.0,
+initial%x = 0.01,
+initial%t = 11.0,
+initial%b = 0.0 0.0 0.0,
+/	   

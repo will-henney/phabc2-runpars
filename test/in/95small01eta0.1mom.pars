@@ -1,0 +1,23 @@
+! Same as 95small01eta0.1 but with lapidus_momentum_only
+&SAVED_PARAMETERS 
+first_order_only = F,
+ilogging = 2,
+debug_fluxes = T,
+use_protection = F,
+lapidus_eta = 0.1,
+lapidus_momentum_only = T,
+atomic_data_dir = '../../../C2Ray/tables',
+xmax =  6.171355164e19, 
+ymax =  6.171355164e19, 
+zmax =  6.171355164e19, 
+time_save_interval =  3.15576e12, 
+nsave_total_run = 10, 
+nxg = 9, nyg = 9, nzg = 9,
+i0 = 5, j0 = 5, k0 = 5, 
+qh0 = 0.0, 
+tstar = 1000.0, 
+initial%n = 100.0,
+initial%x = 0.01,
+initial%t = 11.0,
+initial%b = 0.0 0.0 0.0,
+/	   

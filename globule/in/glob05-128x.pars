@@ -1,0 +1,30 @@
+! -*- f90-mode -*-
+&SAVED_PARAMETERS 
+first_order_only = F,
+lapidus_eta = 0.1,
+ilogging = 2,
+atomic_data_dir = '../../tables',
+! box is extended in the x direction
+xmax =  6.171355164e18, 
+ymax =  3.085677582e18, 
+zmax =  3.085677582e18, 
+time_save_interval =  3.15576e10, 
+nsave_total_run = 600, 
+nxg = 256, nyg = 128, nzg = 128,
+i0 = 1, j0 = 64, k0 = 64, 
+qh0 = 1.e49, 
+tstar = 4.0e+04, 
+initial%n = 100.0,
+initial%x = 0.01,
+initial%t = 1000.0,
+! field strength 5.25e-5, oriented at 45 degrees
+initial%b = 3.71231060124e-5 3.71231060124e-5 0.0,
+initial%variant = 'globule',
+! initial%variant = 'uniform',	
+! globule in center of the left-hand cube
+initial%globule%xyz = 3*1.542838791e18,
+! twice as large as before
+initial%globule%radius = 6.171355164e17,
+initial%globule%profile = 'gauss',
+initial%globule%density_contrast = 100.0,
+/	   

@@ -1,0 +1,36 @@
+! -*- f90 -*-
+&SAVED_PARAMETERS 
+use_pdr_heatcool = T,
+first_order_only = F,
+density_floor = 2.1744e-23, ! minimum 10 pcc
+lapidus_eta = 0.1,
+ilogging = 2,
+! inflow/outflow bcs
+bctype = 4*1, 2*2 
+atomic_data_dir = '../../tables',
+! box is extended in the x direction
+xmax =  6.171355164e18, ! should be ymax*(nxg/nyg)
+ymax =  3.085677582e18, ! 1 pc
+zmax =  2.4296673874e16, ! should be ymax*(nzg/nyg)
+time_save_interval =  3.15576e10, 
+nsave_total_run = 100, 
+nxg = 254, nyg = 127, nzg = 1,
+! star shifted to center of left-hand boundary
+i0 = 1, j0 = 64, k0 = 1, 
+qh0 = 1.e49,                    ! 1000 times weaker EUV
+fuv_euv_ratio = 4.8,             ! three times what I had before
+tstar = 4.0e+04, 
+initial%n = 100.0,
+initial%x = 0.01,
+initial%t = 1500.0,
+! field strength 5.25e-5, along y-axis
+initial%b = 0.0 0.0 0.0,
+initial%variant = 'globule',
+! initial%variant = 'uniform',	
+! globule shifted to center of left-hand square (D = 0.5 pc)
+initial%globule%xyz = 2*1.542838791e18 0.0,
+! twice as large as before (R = 0.2 pc)
+initial%globule%radius = 6.171355164e17,
+initial%globule%profile = 'gauss',
+initial%globule%density_contrast = 100.0,
+/	   

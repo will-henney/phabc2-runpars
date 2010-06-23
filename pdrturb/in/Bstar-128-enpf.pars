@@ -1,0 +1,38 @@
+! -*- f90 -*-
+&SAVED_PARAMETERS         
+! WJH 17 Feb 2010 
+solver = 1,
+use_entropy_fix = T,
+use_constrained_transport = F,
+! Periodic boundary conditions
+bctype = 6*4,                   
+! Default values for efix parameters are alpha = 0.05, beta = 1.0, delta = 0.03, sharpness = 10.0
+efix%alpha = 0.05, ! for SW1 : Pgas / Ptot
+efix%beta = 1.0, ! for SW2 - not used!
+efix%delta = 0.03, ! for SW3 : -del V / V
+efix%sharpness = 10.0, ! for SW3
+! WJH 11 May 2009
+! based on t50m32-weak-dm0.pars and B30krum-256.pars
+cour = 0.39,
+use_pdr_heatcool = T,
+! Star/cluster parameters - poor cluster (N = 200)
+qh0 = 4.e46, 
+tstar = 3.3e+04, 
+fuv_euv_ratio = 62.5,
+xray%Lstar = 1.0e31,
+xray%Lcluster = 6.94e32,
+! 
+lapidus_eta = 0.1,        
+ilogging = 2,             
+atomic_data_dir = '../../tables', 
+xmax =  1.2344e19,   
+ymax =  1.2344e19,   
+zmax =  1.2344e19,   
+time_save_interval =  3.15576e10, 
+nsave_total_run = 1000,    
+nxg = 128, nyg = 128, nzg = 128,  
+i0 = 64, j0 = 64, k0 = 64,     
+! min density 1 pcc      
+density_floor = 2.1744e-25,                 
+initial%variant = 'precalc',                
+/                                

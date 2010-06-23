@@ -1,0 +1,26 @@
+! -*- f90 -*-
+&SAVED_PARAMETERS 
+first_order_only = F,
+lapidus_eta = 0.1,
+ilogging = 3,
+! inflow/outflow bcs
+bctype = 6*1
+atomic_data_dir = '../../tables',
+! box is extended in the x direction
+xmax =  6.171355164e18, 
+ymax =  3.085677582e18, 
+zmax =  3.085677582e18, 
+time_save_interval =  3.15576e10, 
+nsave_total_run = 0, 
+nxg = 8, nyg = 4, nzg = 4,
+! star shifted to center of left-hand boundary
+i0 = 1, j0 = 2, k0 = 1, 
+qh0 = 1.e49, 
+tstar = 4.0e+04, 
+initial%n = 100.0,
+initial%x = 0.01,
+initial%t = 1000.0,
+! field strength 5.25e-5, along y-axis
+initial%b = 0.0 5.25e-5 0.0,
+initial%variant = 'uniform',	
+/	   

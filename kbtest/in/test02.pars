@@ -1,0 +1,16 @@
+&SAVED_PARAMETERS 
+first_order_only = F,
+ilogging = 2,
+atomic_data_dir = '../../tables',
+xmax =  12.e18, 
+ymax =  12.e18, 
+zmax =  12.e18, 
+time_save_interval =  3.15576e11, 
+nsave_total_run = 31, 
+i0 = 30, j0 = 30, k0 = 30, 
+qh0 = 1.e49, 
+tstar = 4.0e+04, 
+initial%n = 1000.0,
+initial%x = 0.01,
+initial%b = 4.5e-5 0.0 0.0,
+/	   

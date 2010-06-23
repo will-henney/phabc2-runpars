@@ -1,0 +1,32 @@
+! -*- f90 -*-
+&SAVED_PARAMETERS
+use_c2ray = F,
+bctype = 6*1,
+solver = 2, 
+ilogging = 2,
+nxg = 64, nyg = 64, nzg = 64,
+xmax = 1.e18, ymax = 1.e18, zmax = 1.e18,
+time_save_interval = 3.15576e10,
+nsave_total_run = 200,
+initial%n = 1.0,
+initial%x = 0.01,
+initial%t = 94.5,
+! B_y = 25 in Hanawa units: beta = 8 pi 0.6**2 / 25**2 = 0.014476
+! Here, P = n k T = 1.3047145335e-14 
+! beta = P / 0.5 B^2 => B = sqrt(2 P / beta) = 1.3426e-6
+initial%b = 0.0 1.3426e-6 0.0,
+initial%v = -5.e5 0.0 0.0,
+initial%variant = 'shotube',
+initial%shocktube%axis = 'x',
+initial%shocktube%ipos = 15,
+initial%shocktube%n = 3.424,
+initial%shocktube%T = 27.6,
+initial%shocktube%x = 0.01,
+initial%shocktube%b = 0.0 7.142632e-7 0.0, 
+initial%shocktube%v = -0.7523e5 0.0 0.0,
+initial%shocktube%has_perturbation = T,
+! Values calculated as per Hanawa et al (2008) p 7960, para 2
+initial%shocktube%perturb_rho = 0.9634,
+initial%shocktube%perturb_p = 0.9512,
+initial%shocktube%perturb_vx = 0.6496,
+/	   

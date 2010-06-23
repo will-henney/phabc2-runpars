@@ -1,0 +1,24 @@
+&SAVED_PARAMETERS         
+first_order_only = F,     
+lapidus_eta = 0.1,        
+ilogging = 2,             
+atomic_data_dir = '../../tables', 
+xmax =  1.2344e19,   
+ymax =  1.2344e19,   
+zmax =  1.2344e19,   
+time_save_interval =  3.15576e11, 
+nsave_total_run = 60,    
+nxg = 64, nyg = 64, nzg = 64,  
+i0 = 32, j0 = 32, k0 = 32,     
+qh0 = 5.e46,                      
+tstar = 3.75e+04,                 
+initial%n = 1000.0,                
+initial%x = 0.01,                 
+initial%t = 5.0,                 
+! This is equal to the RMS field in the Enrique inital conditions
+! Note that the uniform component was actually smaller than this
+initial%b = 6.815e-6 0.0 0.0,  
+! limit wave speeds to 2 km/s
+use_speed_limiter = T,
+speed_limit = 2.e5,
+/ 

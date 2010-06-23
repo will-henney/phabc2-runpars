@@ -1,0 +1,34 @@
+! -*- f90 -*-
+&SAVED_PARAMETERS 
+first_order_only = F,
+lapidus_eta = 0.1,
+ilogging = 2,
+! inflow/outflow bcs
+bctype = 6*1,
+atomic_data_dir = '../../tables',
+! box is extended in the x direction
+xmax =  6.171355164e18, 
+ymax =  3.085677582e18, 
+zmax =  3.085677582e18, 
+time_save_interval =  3.15576e10, 
+nsave_total_run = 150, 
+nxg = 128, nyg = 64, nzg = 64,
+! star on left boundary again
+i0 = 1, j0 = 32, k0 = 32, 
+qh0 = 1.e49, 
+tstar = 4.0e+04, 
+initial%n = 100.0,
+initial%x = 0.01,
+initial%t = 1000.0,
+! weaker field by a factor of sqrt(10)
+! field strength 1.66e-5, oriented at 45 degrees
+initial%b = 2*1.17393568819e-5 0.0,
+initial%variant = 'globule',
+! initial%variant = 'uniform',	
+! globule shifted to 3/8 way along x-axis
+initial%globule%xyz = 2.3142581865e18 2*1.542838791e18,
+! globule radius of 0.1 pc
+initial%globule%radius = 3.085677582e17,
+initial%globule%profile = 'gauss',
+initial%globule%density_contrast = 100.0,
+/	   
