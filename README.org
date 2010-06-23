@@ -1,0 +1,16 @@
+
+* Description
+
+A collection of Fortran namelist i/o files, that contain the parameters for different runs of the radiation-MHD code Phab-C^2
+
+* Active run sets
+
+** pdrturb
+
+HII region in uniform magnetized medium. 
+
+** pdrkrum
+
+HII region in turbulent, magnetized, molecular cloud
+
+* Old run sets
