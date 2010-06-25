@@ -1,13 +1,23 @@
 
 * Description
 
-A collection of Fortran namelist i/o files, that contain the parameters for different runs of the radiation-MHD code Phab-C^2
+A collection of Fortran namelist i/o files, which contain the parameters for different runs of the radiation-MHD code Phab-C²
+
+** Directory structure
+#+begin_example
+RUNSET/in/RUN.pars
+#+end_example
+Where =RUNSET= is =pdrturb=, =pdrkrum=, etc. 
 
 * Active run sets
 
 ** pdrturb
 
 HII region in uniform magnetized medium. 
+
+*** Ostar-et
+O star in turbulent medium, with entropy fix (=e=) and temperature ceiling (=t=), currently set at 3e4 K. 
+
 
 ** pdrkrum
 
