@@ -1,0 +1,7 @@
+*/out/
+*/*.log
+*/*.out
+*/*stats
+*/*.dat
+*/*.profile
+M10J4beta0.1/
