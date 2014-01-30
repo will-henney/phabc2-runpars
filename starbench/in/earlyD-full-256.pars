@@ -1,0 +1,33 @@
+&SAVED_PARAMETERS 
+use_pdr_heatcool = F,
+density_floor = 2.1744e-24, ! minimum 1 pcc
+! Star parameters - EUV only
+qh0 = 1.e49, 
+tstar = 4e+04, 
+fuv_euv_ratio = 0.0,
+xray%Lstar = 0.0,
+xray%Lcluster = 0.0,
+! 
+lapidus_eta = 0.1,
+ilogging = 2,
+atomic_data_dir = '../../tables',
+! R = 1.257 pc
+xmax =  3.87869672057e18, 
+ymax =  3.87869672057e18, 
+zmax =  3.87869672057e18, 
+! t_end = 0.141 Myr
+! Required save times: 0.005, 0.01, 0.02, 0.04, 0.08, 0.14 Myr
+! Use 5000 yr x 28 times
+time_save_interval = 1.57788e11, 
+nsave_total_run = 28,
+! nsave_total_run = 0,
+nxg = 256, nyg = 256, nzg = 256, 
+i0 = 128, j0 = 128, k0 = 128, 
+! Uniform neutral density of 5.21e-21 / mp
+initial%variant = 'uniform',
+initial%n = 3114.87072886,
+initial%x = 0.01,
+initial%t = 100.0,	
+! Zero B field
+initial%b = 0.0 0.0 0.0,
+/	   
