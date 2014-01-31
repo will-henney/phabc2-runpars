@@ -1,7 +1,6 @@
 &SAVED_PARAMETERS 
 use_pdr_heatcool = F,
-use_entropy_fix = F,
-use_protection = F,
+use_entropy_fix = T,
 density_floor = 2.1744e-24, ! minimum 1 pcc
 ! Star parameters - EUV only
 qh0 = 1.e49, 
@@ -19,17 +18,20 @@ ymax =  3.87869672057e18,
 zmax =  3.87869672057e18, 
 ! t_end = 0.141 Myr
 ! Required save times: 0.005, 0.01, 0.02, 0.04, 0.08, 0.14 Myr
-! Use 50 yr x 10 times to get started
-time_save_interval = 1.57788e09, 
+! Use 5 yr x 10 times to get started
+time_save_interval = 1.57788e08, 
 nsave_total_run = 10,
 ! nsave_total_run = 0,
 nxg = 256, nyg = 256, nzg = 256, 
 i0 = 128, j0 = 128, k0 = 128, 
 ! Uniform neutral density of 5.21e-21 / mp
-initial%variant = 'uniform',
+initial%variant = 'stroemgren',
 initial%n = 3114.87072886,
 initial%x = 0.01,
-initial%t = 100.0,	
+initial%t = 100.0,
+initial%stroemgren%position = 'center',
+initial%stroemgren%radius = 0.9685e18,
+initial%stroemgren%ionfrac = 0.999,	
 ! Zero B field
 initial%b = 0.0 0.0 0.0,
 /	   
